@@ -27,3 +27,19 @@ The pipeline is divided into three decoupled services: Data Engineering, Deep Le
        │
        ▼
 [RDKit Validation]            --> Calculates fitness (drug-likeness, synthetic accessibility).
+```
+## Tech Stack
+* **Data Engineering:** Python, PySpark, Parquet
+* **Deep Learning:** PyTorch (Variational Autoencoder, Reparameterization Trick)
+* **Cheminformatics:** RDKit (Molecular property scoring)
+* **Optimization:** Custom Continuous Genetic Algorithm
+
+## Current Project Phase
+Given the massive scale of chemical datasets (e.g., ZINC15 contains millions of compounds), the current phase focuses on establishing a robust, distributed data preprocessing pipeline before provisioning GPU clusters for model training.
+
+* **[Implemented]** PySpark ingestion logic and Parquet schema conversion.
+* **[Implemented]** VAE Object-Oriented class stubs (Encoder, Reparameterization Layer, Decoder).
+* **[Implemented]** Continuous GA mathematical operators (Arithmetic Crossover).
+* **[Pending]** Distributed cluster execution on Google Cloud Dataproc.
+* **[Pending]** VAE training loop (minimizing Reconstruction Loss + KL Divergence).
+
